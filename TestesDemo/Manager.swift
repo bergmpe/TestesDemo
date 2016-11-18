@@ -14,7 +14,7 @@ class Manager: NSObject {
     
     var accounts: [Account]{
         guard let path = Bundle(for: type(of: self)).path(forResource: "accounts", ofType: "json")
-            else { fatalError("Can't find Pokemon JSON resource.") }
+            else { fatalError("Can't find Account JSON resource.") }
         
         let data = try! Data(contentsOf: URL(fileURLWithPath: path))
         let json = try! JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! [[String : Any]]
