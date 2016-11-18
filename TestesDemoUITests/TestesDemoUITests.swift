@@ -34,8 +34,17 @@ class TestesDemoUITests: XCTestCase {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
         
+        
+        let numeroDaContaTextField = XCUIApplication().textFields["numero da conta"]
+        numeroDaContaTextField.tap()
+        numeroDaContaTextField.typeText("100")
+        
         let app = XCUIApplication()
-        XCTAssertTrue(app.staticTexts["Login"].exists)
+        let senhaTextField = app.textFields["senha"]
+        senhaTextField.tap()
+        senhaTextField.typeText("1234")
+        app.buttons["Login"].tap()
+        
     }
     
 }
