@@ -8,6 +8,8 @@
 
 import XCTest
 
+@testable import TestesDemo
+
 class TestesDemoUITests: XCTestCase {
         
     override func setUp() {
@@ -31,6 +33,9 @@ class TestesDemoUITests: XCTestCase {
     func testExample() {
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let app = XCUIApplication()
+        XCTAssertTrue(app.staticTexts["Login"].exists)
     }
     
 }
