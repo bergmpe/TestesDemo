@@ -14,12 +14,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var numeroContaTextField: UITextField!
     @IBOutlet weak var senhaTextField: UITextField!
     
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
     var account: Account?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        account = Account(num: 120, password: "eita")
+        //account = Account(num: 120, password: "eita")
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,11 +30,19 @@ class ViewController: UIViewController {
     }
 
     @IBAction func loginAction(_ sender: UIButton) {
+        
         if let numConta = Int(numeroContaTextField.text!), let senha = senhaTextField.text{
             account = Account(num: numConta, password: senha)
+            if appDelegate.bankManager.login(anAccount: account!){
+                self.performSegue(withIdentifier: "features", sender: sender)
+            }
+            else{
+                print("conta ou senha invalida")
+            }
         }
-        
-        self.performSegue(withIdentifier: "features", sender: sender)
+        else{
+            print("valores invalidos")
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

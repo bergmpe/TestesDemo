@@ -29,14 +29,18 @@ class Manager: NSObject {
         return accounts
     }
     
-    func getJson(){
-        print(accounts[0].num)
+    func login(anAccount: Account) -> Bool{
+        for account in accounts{
+            if account.num == anAccount.num && account.password == anAccount.password{
+                return true
+            }
+        }
+        return false
     }
     
     
     func asynchronousURLConnection() {
         let url = URL(string: "http://nshipster.com/")!
-        
         
         let session = URLSession.shared
         let task = session.dataTask(with: url)

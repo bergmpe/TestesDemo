@@ -16,7 +16,7 @@ class FeatureViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        print(currentAccount?.password)
+        print("Conta Atual: \(currentAccount?.num) \(currentAccount?.password)")
     }
 
     override func didReceiveMemoryWarning() {
