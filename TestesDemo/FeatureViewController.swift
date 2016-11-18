@@ -10,16 +10,20 @@ import UIKit
 
 class FeatureViewController: UIViewController {
 
+    var currentAccount: Account?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        print(currentAccount?.password)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     
     @IBAction func consultarSaldoAction(_ sender: Any) {
     }

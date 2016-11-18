@@ -12,12 +12,14 @@ class ViewController: UIViewController {
 
     
     @IBOutlet weak var numeroContaTextField: UITextField!
-    
     @IBOutlet weak var senhaTextField: UITextField!
+    
+    var account: Account?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        account = Account(num: 120, password: "eita")
     }
 
     override func didReceiveMemoryWarning() {
@@ -26,8 +28,19 @@ class ViewController: UIViewController {
     }
 
     @IBAction func loginAction(_ sender: UIButton) {
+        if let numConta = Int(numeroContaTextField.text!), let senha = senhaTextField.text{
+            account = Account(num: numConta, password: senha)
+        }
         
-        self.show(<#T##vc: UIViewController##UIViewController#>, sender: <#T##Any?#>)
+        self.performSegue(withIdentifier: "features", sender: sender)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "features"{
+            if let destinationVC = segue.destination as? FeatureViewController{
+                destinationVC.currentAccount = account
+            }
+        }
     }
     
     
