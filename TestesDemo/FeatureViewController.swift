@@ -26,6 +26,12 @@ class FeatureViewController: UIViewController {
     
     
     @IBAction func consultarSaldoAction(_ sender: Any) {
+        
+        let alert = UIAlertController(title: "Saldo", message: "valor: \(currentAccount!.saldo)", preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        alert.addAction(alertAction)
+        self.present(alert, animated: true, completion: nil)
+        
     }
     
     @IBAction func sacarAction(_ sender: UIButton) {

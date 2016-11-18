@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         
         if let numConta = Int(numeroContaTextField.text!), let senha = senhaTextField.text{
             if appDelegate.bankManager.login(num: numConta, password: senha){
-                
+                account = appDelegate.bankManager.getAccount(num: numConta)
                 self.performSegue(withIdentifier: "features", sender: sender)
             }
             else{
