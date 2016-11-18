@@ -20,6 +20,9 @@
 		97ECA3CE1DDDEB0300EF6D58 /* TestesDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97ECA3CD1DDDEB0300EF6D58 /* TestesDemoUITests.swift */; };
 		97F06F871DDF18BC0013BE95 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F06F861DDF18BC0013BE95 /* Account.swift */; };
 		97F06F881DDF18BC0013BE95 /* Account.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F06F861DDF18BC0013BE95 /* Account.swift */; };
+		97F06F8A1DDF1C550013BE95 /* FeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F06F891DDF1C550013BE95 /* FeatureViewController.swift */; };
+		97F06F8B1DDF1C550013BE95 /* FeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F06F891DDF1C550013BE95 /* FeatureViewController.swift */; };
+		97F06F8C1DDF1C550013BE95 /* FeatureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97F06F891DDF1C550013BE95 /* FeatureViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,7 @@
 		97ECA3CD1DDDEB0300EF6D58 /* TestesDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestesDemoUITests.swift; sourceTree = "<group>"; };
 		97ECA3CF1DDDEB0300EF6D58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		97F06F861DDF18BC0013BE95 /* Account.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Account.swift; sourceTree = "<group>"; };
+		97F06F891DDF1C550013BE95 /* FeatureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeatureViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,7 @@
 				97ECA3B41DDDEB0300EF6D58 /* Assets.xcassets */,
 				97ECA3B61DDDEB0300EF6D58 /* LaunchScreen.storyboard */,
 				97ECA3B91DDDEB0300EF6D58 /* Info.plist */,
+				97F06F891DDF1C550013BE95 /* FeatureViewController.swift */,
 			);
 			path = TestesDemo;
 			sourceTree = "<group>";
@@ -286,6 +291,7 @@
 			files = (
 				97ECA3B01DDDEB0300EF6D58 /* ViewController.swift in Sources */,
 				97F06F871DDF18BC0013BE95 /* Account.swift in Sources */,
+				97F06F8A1DDF1C550013BE95 /* FeatureViewController.swift in Sources */,
 				97781DA91DDE0CB40076B1D6 /* Manager.swift in Sources */,
 				97ECA3AE1DDDEB0300EF6D58 /* AppDelegate.swift in Sources */,
 			);
@@ -296,6 +302,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97ECA3C31DDDEB0300EF6D58 /* TestesDemoTests.swift in Sources */,
+				97F06F8B1DDF1C550013BE95 /* FeatureViewController.swift in Sources */,
 				97781DAA1DDE0CB40076B1D6 /* Manager.swift in Sources */,
 				97F06F881DDF18BC0013BE95 /* Account.swift in Sources */,
 			);
@@ -306,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				97ECA3CE1DDDEB0300EF6D58 /* TestesDemoUITests.swift in Sources */,
+				97F06F8C1DDF1C550013BE95 /* FeatureViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
