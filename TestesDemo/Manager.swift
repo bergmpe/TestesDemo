@@ -22,20 +22,46 @@ class Manager: NSObject {
         let accounts = json.map { (object) -> Account in
             let num      = object["num"] as! Int
             let password = object["password"] as! String
+            let saldo = object["saldo"] as! Float
             
-            return Account(num: num, password: password)
+            return Account(num: num, password: password, saldo: saldo)
         }
         
         return accounts
     }
     
-    func login(anAccount: Account) -> Bool{
+    func login(num: Int, password: String) -> Bool{
         for account in accounts{
-            if account.num == anAccount.num && account.password == anAccount.password{
+            if num == account.num && password  == account.password{
                 return true
             }
         }
         return false
+    }
+    
+    func getAccount(num: Int) -> Account?{
+        for account in accounts{
+            if account.num == num{
+                return account
+            }
+        }
+        return nil
+    }
+    
+    func depositar(value: Float, account: Account){
+        account.saldo += value
+    }
+    
+
+    func cashOut(value: Float, account: Account) -> Bool{
+        
+        if account.hasEnoughCash(value: value){
+            account.saldo -= value
+            return true
+        }
+        else{
+            return false
+        }
     }
     
     

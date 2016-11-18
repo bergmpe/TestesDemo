@@ -1,4 +1,4 @@
 [
-  { "num": 100, "password": "1234"},
-  { "num": 200, "password": "abcd"}
+  { "num": 100, "password": "1234", "saldo": 50},
+  { "num": 200, "password": "abcd", "saldo": 80}
 ]

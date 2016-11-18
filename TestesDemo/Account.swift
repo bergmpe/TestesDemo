@@ -12,10 +12,16 @@ class Account: Equatable {
     
     var num : Int
     var password : String
+    var saldo: Float
     
-    init(num : Int, password : String) {
+    init(num : Int, password : String, saldo: Float) {
         self.num = num
         self.password = password
+        self.saldo = saldo
+    }
+    
+    func hasEnoughCash(value: Float) -> Bool{
+        return self.saldo >= value
     }
     
     

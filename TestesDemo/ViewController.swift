@@ -32,8 +32,8 @@ class ViewController: UIViewController {
     @IBAction func loginAction(_ sender: UIButton) {
         
         if let numConta = Int(numeroContaTextField.text!), let senha = senhaTextField.text{
-            account = Account(num: numConta, password: senha)
-            if appDelegate.bankManager.login(anAccount: account!){
+            if appDelegate.bankManager.login(num: numConta, password: senha){
+                
                 self.performSegue(withIdentifier: "features", sender: sender)
             }
             else{
